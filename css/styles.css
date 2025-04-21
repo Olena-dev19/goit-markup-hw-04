@@ -486,7 +486,7 @@ img {
 .footer-sect-cont {
     flex-direction: column;
     gap: 16px;
-    
+   
 }
 
 .logo-ft {
@@ -516,7 +516,7 @@ img {
    display: inline-block;
    position: absolute;
    top: 100px;
-   left: 540px;
+   right: 692px;
 
 }
 
