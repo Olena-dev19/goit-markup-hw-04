@@ -108,10 +108,21 @@ img {
     display: inline-block;
     width: 100%;
     height: 4px;
-    background-color: #404bbf;
     position: absolute;
+    background-color: #404bbf;  
     bottom: -1px;
     left: 0;
+    border-radius: 2px;
+    background-color: #fff;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
+}
+
+.nav-studio:active::after {
+    background-color: #404bbf;
+    
 }
 
 .nav-link {
@@ -124,6 +135,9 @@ img {
     letter-spacing: 0.02em;
     display: block;
     padding: 24px 0;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 .nav-link:hover {
@@ -134,12 +148,7 @@ img {
     color: #404BBF;
 }
 
-.nav-studio::before {
-    border-radius: 2px;
-    width: 48px;
-    height: 4px;
-    background-color: #404bbf;
-}
+
 
 .cont-list {
     display: flex;
@@ -157,6 +166,9 @@ img {
     text-decoration: none;
     letter-spacing: 0.02em;
     color: #434455;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -209,6 +221,9 @@ img {
     border-radius: 4px;
     border: none;
     min-width: 169px;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -301,13 +316,14 @@ img {
 .sect-team-card {
     background-color: #ffffff;
     border-radius: 0 0 4px 4px;
-    box-shadow: 0 2px 1px rgba( 46, 47, 66, 0.08);
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
     width: calc(( 100% - 72px) / 4 );
     
 }
+
 
 .card-item {
     padding: 32px 0;
@@ -345,6 +361,10 @@ img {
     background-color:#4D5AE5;
     position: relative;
     flex-shrink: 0;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .team-icons-act {
@@ -388,7 +408,47 @@ img {
     column-gap: 24px;
 }
 
+.sect-port-item {
+    position: relative;
+    overflow: hidden;
+    transform: box-shadow;
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 360px;
+    height: 300px;
+    transform:  translateY(150%);
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 
+.portf-animation {
+    background: #4d5ae5;
+}
+
+.sect-port-item:hover {
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
+
+.sect-port-item:hover .overlay {
+    transform: translateY(0);
+    
+}
+
+.portf-anima-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #f4f4fd;
+    padding: 40px 32px;
+}
 
 .port-text {
     padding: 32px 16px;
@@ -405,24 +465,28 @@ img {
     margin-bottom: 8px;
     
 }
+
 .prt-text {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-   
-    
+
 }
+
+
 /* footer */
 .footer-sect{
     background-color:#2e2f42;
     padding-bottom: 100px;
     padding-top: 100px;
+    position: relative;
 }
 
 .footer-sect-cont {
     flex-direction: column;
     gap: 16px;
+    
 }
 
 .logo-ft {
@@ -444,7 +508,56 @@ img {
     letter-spacing: 0.02em;
     color: #f4f4fd;
     max-width: 264px;
+    
    
 }
 
+.footer-icons {
+   display: inline-block;
+   position: absolute;
+   top: 100px;
+   left: 540px;
+
+}
+
+.footer-icons-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #fff;
+    margin-bottom: 16px;
+}
+
+
+
+.footer-icons-sol {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.foot-icon-border {
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;
+    background-color: #4D5AE5;
+    position: relative;
+    flex-shrink: 0;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.foot-icons-act {
+    fill: #f4f4fd;
+    stroke: none;
+    position: absolute;
+    bottom: 9px;
+    left: 8px;
+}
+
+.foot-icon-border:hover {
+    background-color: #31D0AA;
+}
 
