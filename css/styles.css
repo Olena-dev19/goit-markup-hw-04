@@ -104,11 +104,10 @@ img {
 }
 
 .nav-studio {
-    position: relative;
-    color: #404BBF;
+    
 }
 
-.nav-studio::after {
+.nav-link::after {
     content: "";
     border-radius: 2px;
     display: inline-block;
@@ -126,7 +125,7 @@ img {
     
 }
 
-.nav-studio:active::after {
+.nav-link:active::after {
     background-color: #404bbf;
     
 }
@@ -145,6 +144,7 @@ img {
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
+    color: #404BBF;
 
 }
 .nav-link:hover {
